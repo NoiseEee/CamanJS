@@ -258,7 +258,7 @@ class Caman extends Module
     @image.src = data
 
     Log.debug "Image loaded. Width = #{@imageWidth()}, Height = #{@imageHeight()}"
-    @canvas = new Canvas @imageWidth(), @imageHeight()
+    @canvas = new Canvas.Canvas @imageWidth(), @imageHeight()
     @finishInit()
 
   # Initialization function for the browser and image objects.
