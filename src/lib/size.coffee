@@ -3,7 +3,7 @@
 Caman.Plugin.register "crop", (width, height, x = 0, y = 0) ->
   # Create our new canvas element
   if exports?
-    canvas = new Canvas width, height
+    canvas = new Canvas.Canvas width, height
   else
     canvas = document.createElement 'canvas'
     Util.copyAttributes @canvas, canvas
@@ -37,7 +37,7 @@ Caman.Plugin.register "resize", (newDims = null) ->
     newDims.height = @canvas.height * newDims.width / @canvas.width
 
   if exports?
-    canvas = new Canvas newDims.width, newDims.height
+    canvas = new Canvas.Canvas newDims.width, newDims.height
   else
     canvas = document.createElement 'canvas'
     Util.copyAttributes @canvas, canvas

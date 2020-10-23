@@ -1605,7 +1605,7 @@
         opacity: 1.0
       };
       this.layerID = Util.uniqid.get();
-      this.canvas = typeof exports !== "undefined" && exports !== null ? new Canvas() : document.createElement('canvas');
+      this.canvas = typeof exports !== "undefined" && exports !== null ? new Canvas.Canvas() : document.createElement('canvas');
       this.canvas.width = this.c.dimensions.width;
       this.canvas.height = this.c.dimensions.height;
       this.context = this.canvas.getContext('2d');
@@ -2540,7 +2540,7 @@
       y = 0;
     }
     if (typeof exports !== "undefined" && exports !== null) {
-      canvas = new Canvas(width, height);
+      canvas = new Canvas.Canvas(width, height);
     } else {
       canvas = document.createElement('canvas');
       Util.copyAttributes(this.canvas, canvas);
@@ -2572,7 +2572,7 @@
       newDims.height = this.canvas.height * newDims.width / this.canvas.width;
     }
     if (typeof exports !== "undefined" && exports !== null) {
-      canvas = new Canvas(newDims.width, newDims.height);
+      canvas = new Canvas.Canvas(newDims.width, newDims.height);
     } else {
       canvas = document.createElement('canvas');
       Util.copyAttributes(this.canvas, canvas);
